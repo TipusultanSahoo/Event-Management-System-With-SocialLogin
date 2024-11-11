@@ -1,0 +1,64 @@
+/* custom-styles.css */
+
+/* General Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #f1c40f; /* Yellow text color */
+}
+
+header, footer, .navbar, .card {
+    background-color: #1c1c1c; 
+    color: #f1c40f;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+    color: #f1c40f;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffd700; /* Brighter yellow on hover */
+}
+
+.nav-link:hover {
+    color: wheat !important;
+}
+
+/* Form Styling */
+.form-control {
+    background-color: #2a2a2a;
+    color: #f1c40f;
+    border: 1px solid #f1c40f;
+}
+
+.form-control:focus {
+    background-color: #2a2a2a;
+    border-color: #ffd700;
+    box-shadow: none;
+}
+
+/* Button Styling */
+.btn-primary, .btn-success, .btn {
+    background-color: #f1c40f;
+    color: #121212;
+    border: none;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn:hover {
+    background-color: #ffd700;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #f1c40f;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    color: #f1c40f;
+    border-top: 1px solid #f1c40f;
+}
+input{
+    color: wheat !important;
+}

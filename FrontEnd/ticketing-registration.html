@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing and Registration - Event Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="custom-styles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212529; /* Dark background */
+            color: #f8f9fa; /* Light text */
+        }
+
+        .event-card {
+            background-color: #343a40; /* Darker background for cards */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space between cards */
+        }
+
+        .btn-warning {
+            background-color: #ffc107; /* Yellow color */
+            border: none; /* No border */
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .event-card img {
+                height: 150px; /* Smaller height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Event Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-event.html">Create Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover-events.html">Discover Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ticketing-registration.html">Ticketing & Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center text-warning">Ticketing and Registration</h2>
+
+        <!-- Event Cards for Ticketing -->
+        <div id="eventCardsContainer" class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/music-concert.jpg" class="card-img-top" alt="Music Concert">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Music Concert</h5>
+                        <p class="card-text">Date: 2024-12-01<br>Location: New York</p>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setEventDetails('Music Concert', '2024-12-01', 'New York', 50)">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/tech-expo.jpg" class="card-img-top" alt="Tech Expo">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Technology Expo</h5>
+                        <p class="card-text">Date: 2024-11-15<br>Location: San Francisco</p>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setEventDetails('Technology Expo', '2024-11-15', 'San Francisco', 75)">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <!-- More event cards can be added here -->
+        </div>
+    </div>
+
+    <!-- Modal for Ticket Purchase -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ticketModalLabel">Purchase Tickets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ticketForm">
+                        <div class="mb-3">
+                            <label for="eventName" class="form-label">Event</label>
+                            <input type="text" class="form-control" id="eventName" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDate" class="form-label">Date</label>
+                            <input type="text" class="form-control" id="eventDate" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="attendeeName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="attendeeName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticketQuantity" class="form-label">Number of Tickets</label>
+                            <input type="number" class="form-control" id="ticketQuantity" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="totalCost" class="form-label">Total Cost</label>
+                            <input type="text" class="form-control" id="totalCost" disabled>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Function to set event details in the modal
+        function setEventDetails(name, date, location, price) {
+            document.getElementById('eventName').value = name;
+            document.getElementById('eventDate').value = date;
+            document.getElementById('ticketQuantity').addEventListener('input', function () {
+                const quantity = this.value;
+                document.getElementById('totalCost').value = `$${quantity * price}`;
+            });
+        }
+        
+        // Handle form submission
+        document.getElementById('ticketForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Tickets purchased successfully!');
+            // Here you can add further logic to save the purchase in the backend
+            $('#ticketModal').modal('hide'); // Hide modal
+            this.reset(); // Reset the form
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendee Engagement - Event Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="custom-styles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212529; /* Dark background */
+            color: #f8f9fa; /* Light text */
+        }
+
+        .card {
+            background-color: #343a40; /* Darker background for cards */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space between cards */
+        }
+
+        .btn-warning {
+            background-color: #ffc107; /* Yellow color */
+            border: none; /* No border */
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Event Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-event.html">Create Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover-events.html">Discover Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ticketing-registration.html">Ticketing & Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="attendee-engagement.html">Attendee Engagement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center text-warning">Attendee Engagement</h2>
+
+        <!-- Engagement Activities -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Discussion Forum</h5>
+                        <p class="card-text">Join discussions with fellow attendees about the event topics.</p>
+                        <a href="#" class="btn btn-warning">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Live Q&A</h5>
+                        <p class="card-text">Participate in live Q&A sessions with speakers and experts.</p>
+                        <a href="#" class="btn btn-warning">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Feedback Survey</h5>
+                        <p class="card-text">Share your thoughts and help us improve future events.</p>
+                        <a href="#" class="btn btn-warning">Take Survey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
