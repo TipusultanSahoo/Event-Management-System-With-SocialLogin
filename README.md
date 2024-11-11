@@ -31,3 +31,26 @@ Welcome to the **Event Management System** – a full-stack web application desi
 ### 1️⃣ Clone the repository:
 ```bash
 git clone https://github.com/TipusultanSahoo/Event-Management-System-Final.git
+
+## 2️⃣ Backend Setup (Spring Boot):
+Import the backend folder into Spring Tool Suite (STS) or your preferred IDE.
+
+Configure PostgreSQL settings in application.properties.
+
+Set up Google OAuth by adding credentials as environment variables:
+
+```bash
+Copy code
+# On Windows
+set GOOGLE_CLIENT_ID=your_client_id
+set GOOGLE_CLIENT_SECRET=your_client_secret
+
+## 3️⃣ Launch the Frontend:
+Open the frontend folder in VS Code.
+Start the application and you're ready to go!
+## 📖 Usage Guide
+** 👤 Login: ** Access the platform as an Organizer or Attendee using email/password or Google login.
+** 🛠 Forgot Password: ** Quickly reset your password via the Forgot Password option on the login page.
+** ✨ Event Discovery: ** Explore events without logging in. Search by keyword, location, or date and dive into event details!
+** 📈 Event Management: ** As an Organizer, you can create, view, edit, and cancel events.
+
